@@ -1,0 +1,10 @@
+[Unit]
+Description=Console Font Setter
+After=getty@tty1.service
+
+[Service]
+#Change /usr/share/consolefonts selection, as desired. 
+ExecStart=setfont -C /dev/tty1 '/usr/share/consolefonts/Uni2-Terminus28x14.psf.gz'
+
+[Install]
+WantedBy=multi-user.target
